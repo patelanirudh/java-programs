@@ -4,7 +4,7 @@ public class BinarySearchTree {
 	
 	Node root = null;
 	static int nodeHeight = -1;
-	
+		
 	class Node {
 		int key;
 		Node left, right;
@@ -107,7 +107,40 @@ public class BinarySearchTree {
 		}
 	}
 	
+	// Function that returns the node with minimum
+	// key value found in that tree
+	public Node recursiveFindMin(Node node) {
+		if (node == null)
+			return null;
+						
+		if (node.left != null)
+		 node =	recursiveFindMin(node.left);
+		
+		return node; 
+	}
+	
+	// Function that returns the node with minimum
+	// key value found in that tree
+	static Node minValueNode(Node node)
+	{
+			Node current = node;
 
+			// Loop down to find the leftmost leaf
+			while (current != null && current.left != null)
+				current = current.left;
+
+			return current;
+	}
+	
+	static Node maxValueNode(Node node) {
+		Node current = node;
+		
+		while(current != null && current.right != null)
+			current = current.right;
+		
+		return current;		
+	}
+	
 	public static void main(String[] args) {
 /*						   50				level = 0
  * 					 30			  70		level = 1
@@ -150,6 +183,10 @@ public class BinarySearchTree {
 		
 		System.out.println("Print All Level Order Nodes");
 		bst.printLevelOrder(bst.root);
+		
+		System.out.println("\nBST Recursive Minimum Value Node " + bst.recursiveFindMin(bst.root).key);
+		System.out.println("\nBST Minimum Value Node " + BinarySearchTree.minValueNode(bst.root).key);
+		System.out.println("\nBST Maximum Value Node " + BinarySearchTree.maxValueNode(bst.root).key);
 	}
 
 }
