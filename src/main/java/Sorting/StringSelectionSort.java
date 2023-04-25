@@ -24,6 +24,13 @@ public class StringSelectionSort {
 		for (String i : arr) {
 			System.out.print(i + " ");
 		}
+		
+		// Via Collections Sort
+//		Collections.sort(Arrays.asList(arr));
+//		for (String i : arr) {
+//			System.out.print(i + " ");
+//		}
+		
 	}
 	
 }

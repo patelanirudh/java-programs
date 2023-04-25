@@ -1,4 +1,3 @@
-
 public class OuterClass {
 
 	private static int i = 10;
@@ -34,9 +33,42 @@ public class OuterClass {
 		// OuterClass.InnerStaticClass variable = new
 		// OuterClass.InnerStaticClass();
 		// Only static class Ctor is invoked, not OuterClass
-		OuterClass.InnerStaticClass object = new OuterClass.InnerStaticClass();
-		OuterClass.InnerStaticClass.staticPrint();
-		object.print();
+//		OuterClass.InnerStaticClass object = new OuterClass.InnerStaticClass();
+//		OuterClass.InnerStaticClass.staticPrint();
+//		object.print();
+		
+//		Map<String, Integer> map1 = new HashMap<>();
+//		String str1 = "Hello";
+//		map1.put(str1, 1);
+//		String str2 = new String("Hello");
+//		map1.put(str2, 2);
+//		String str3 = new String("Hello");
+//		map1.put(str3, 3);
+//		System.out.println(map1.size());
+//		System.out.println(map1.get("Hello"));
+//		System.out.println(map1.get(new String("Hello")));
+//		System.out.println(str1.equals(str2));
+//		System.out.println(str2.equals(str3));
+//		System.out.println(str1.equals(str3));
+//		System.out.println(str1.hashCode());
+//		System.out.println(str2.hashCode());
+//		System.out.println(str1.hashCode());
+		
+		
+		String str1 = "HashMap";
+		String str2 = "Hash" + "Map";
+		String str3 = "Hash".concat("Map");
+
+		System.out.println(str1.hashCode());
+		System.out.println(str2.hashCode());
+		System.out.println(str3.hashCode());
+
+		System.out.println(str1 == str2);
+		System.out.println(str1 == str3);
+		System.out.println(str2 == str3);
+		System.out.println(str2.equals(str3));
+		System.out.println(str2.equals(str1));
+		
 	}
 
 }

@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.PriorityQueue;
 
 public class PriorityQEx {
-
+	
 	public static void main(String[] args) {
 		PriorityQueue<Integer> pq = new PriorityQueue<>(10);
 

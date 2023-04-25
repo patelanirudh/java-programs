@@ -18,7 +18,7 @@ public class HashMapEx {
 			if (hm.containsKey(key)) {
 				// get the value for the key (which is 1 in else case) and add + 1 to increase
 				// the frequency count
-				// this is updation of value for same key and not insertion of new elements
+				// this is updating the value for same key and not insertion of new elements
 				hm.put(key, hm.get(key) + 1);
 			} else {
 				// insert 1 as frequency count of key

@@ -11,7 +11,7 @@ public class LargestElement {
 		
 		// set/assume largest
 		int larg = arr[0];
-		int idx = 0;
+		int idx = -1;
 		
 		for(int i = 1; i < arr.length; i++) {
 			if (arr[i] > larg) {
